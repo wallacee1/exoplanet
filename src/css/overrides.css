@@ -1,0 +1,201 @@
+@import "normalize.css";
+
+@font-face {
+    font-family: MoonRegular;
+    src: url("../../assets/font/MOON 2.0 FREE/Moon2.0-Regular.woff") format("woff");
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url("../../assets/font/AvenirLTStd-Medium.woff") format("woff");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Avenir", sans-serif;
+    font-weight: normal;
+    line-height: 2em;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.mainContent {
+    background-color: #222;
+    width: 95%;
+    position: absolute;
+    left: 2.5%;
+}
+
+header {
+    font-family: MoonRegular, serif;
+    font-size: 38px;
+    text-align: center;
+    margin: 25px;
+}
+
+.essay {
+    width: 80%;
+    margin-left: 30px;
+}
+
+.author {
+    margin-bottom: 15px;
+    position: absolute;
+    right: 27px;
+    top: 77px;
+}
+
+.essay ul {
+    margin-left: 30px;
+}
+
+h2 {
+    font-family: MoonRegular, sans-serif;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: MoonRegular, sans-serif;
+    font-weight: normal;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.planet {
+    display: inline-block;
+    position: relative;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.planet img {
+    width: 1750px;
+    height: auto;
+    margin: -29px 0 0 -275px;
+
+}
+
+.surface {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.surface img {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.contactForm {
+    justify-content: center;
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration-style: dashed;
+}
+
+.form-row {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.form-row label {
+    margin-bottom: 15px;
+}
+
+.form-row textarea {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 7px;
+    resize: none;
+}
+
+/*tablets*/
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+
+    body {
+        width: 100%;
+    }
+
+    .planet{
+        float: right;
+        top: 1%;
+        left: 15%;
+    }
+
+    .form-row {
+        flex-direction: row;
+        align-items: flex-start; /* To avoid stretching */
+        margin-bottom: 20px;
+    }
+    .form-row input[type='text'],
+    .form-row input[type='email'],    /* Add */
+    .form-row select,                 /* These */
+    .form-row textarea {              /* Selectors */
+        width: 250px;
+        height: initial;
+    }
+    .form-row label {
+        text-align: right;
+        width: 120px;
+        margin-top: 7px;
+        padding-right: 20px;
+    }
+    .form-row button {
+        margin-left: 120px;
+    }
+}
+/*desktop*/
+@media only screen and (min-width: 960px) {
+    .mainContent {
+        max-width: 961px;
+        position: absolute;
+        left: 20%;
+        right: 20%;
+    }
+
+    .planet{
+        float: right;
+        top: 1%;
+        left: 1%;
+    }
+
+    .text {
+        width: 900px;
+    }
+}
